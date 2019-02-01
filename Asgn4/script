@@ -1,0 +1,9 @@
+#!/bin/bash
+gcc -c add.c;
+gcc -c sub.c;
+gcc -c mpy.c;
+gcc -c div.c;
+
+ar rcs libas.a add.o sub.o;
+gcc -shared mpy.o div.o -o libmd.so
+gcc main.c libas.a libmd.so -o main;
