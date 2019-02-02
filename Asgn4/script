@@ -1,9 +1,9 @@
 #!/bin/bash
-gcc -c add.c;
-gcc -c sub.c;
-gcc -c mpy.c;
-gcc -c div.c;
-
+gcc -fPIC -c add.c;
+gcc -fPIC -c sub.c;
+gcc -fPIC -c mpy.c;
+gcc -fPIC -c div.c;
+export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
 ar rcs libas.a add.o sub.o;
-gcc -shared mpy.o div.o -o libmd.so
+gcc mpy.o div.o -shared -o libmd.so
 gcc main.c libas.a libmd.so -o main;
