@@ -24,6 +24,9 @@ while [[ true ]]; do
 	 awk '{print $(NF-1)}' temp > func;
 	 main=$(head -n 1 func)
 	 sed -i '1d' func;
+	 if [[ ! -v arr[$main] ]] ; then
+ 		 let arr[$main]=0
+	fi
 	 while [[ true ]]; do
 		
 	    if [ ! -s "func" ] ; then
@@ -32,7 +35,10 @@ while [[ true ]]; do
 	    
 	    sub=$(head -n 1 func);
 	     sed -i '1d' func;
+	     if [[ ! -v arr[$sub] ]] ; then
+ 		 	let arr[$sub]=0
+	fi
 	     echo $main,${arr[$main]},$sub,${arr[$sub]} >> final ;
 	 done
 done
-rm -rf callgraph flat temp
+rm -rf callgraph flat temp func

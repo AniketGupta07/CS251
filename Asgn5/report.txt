@@ -1,0 +1,31 @@
+Algorithm & command for TASK#1
+.........................................................................................
+1) compile the source C code using -fprofile-arcs and -ftest-coverage options.
+2)Execute the generated executablle once.
+3)use the gcov command with -ib options so that it generates a brief summary in a format which is easy to parse.
+4)Now, we store the lcount(i.e., number of time each line is executed) and branch line numbers in two files using grep command suitably.
+5)Now we want to to get the branch bias so we we use gcov once more now with only -b option.
+6) Grep the required data using required pattern and store the results in a file
+7)Now combine the results obtained to get the output in the required format, using commands such as sed, cut,paste etc.
+8) Remove the unnecessary files created in the process.
+
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+
+Algorithm & command for TASK#2
+.........................................................................................
+1) Compile the C code using -Walla nd -pg options and run the code once.
+2) Run the gprof command on the executable using -bp options to get the brief flat profile.
+3) Get the the 3rd and the last column of the flat profile in a seperate file as these columns store the self time and the name of coreesponding function.
+4) We store these functions in a bash dictionary and set their keys to be their corresponding time.
+5) Now run the gprof command using -bP options to get the brief Call Graph, so that we can know which function calls which functions.
+6) Now we move to the line which starts with [1] and store the lines till "---" line and now we know that the function in the last column of first row calls the function in last column of other rows. We repeat this process for each line starting with [2],[3] etc.
+7) To accomplish the task in (6) we used command like sed,awk, while, if,etc.
+8) Once we know that a certain function call some other function we echo thier name and times in the required format in the final file.
+9) It is possible that if the time spent in a function is almost zero then that function doesn't appear in the flat profile so while echoing we have also checked that if the certain function is not in our dictionary then we set its key to be 0.
+
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
