@@ -1,0 +1,33 @@
+Task1:
+Partitioning the files based on its type:
+
+i) Read the file test (containing the required information) line-by-line.
+	Command Used: while,read;
+ii)Store name of file, path and permissions  in variables and file respectively.
+	Command/Method Used : cut,echo,piping,redirection
+iv)Store filetype in a different file.
+	Command USed: file
+v)Modify the path of the file depending on its type.
+	Command Used: if-else, grep
+vi)Move the file to the modified path.
+	Command Used:mkdir,mv
+vi)change the permission of the file as given in the data.
+	Command Used: chmod,grep,if
+vii) Delete the unnecessary files and then repeat the above process for the remaining files.
+	Command Used : rm,while
+
+Task2:
+Live Cricket score notifications:
+i) First we download the rss feed file of the live scores provided by espncricinfo.
+	Command Used: wget (for downloading rss feeds' file)
+ii)Next, we store the scores of the team given by the user as input in a file.(keeping in mind the format of score inn the feed file)
+	Command used: grep
+iii)Then we edit the above file to get the required format of the score
+	Command used: cut
+iv)Then we compare the current score with the previous score and givethe notification if they are not same.
+	Command Used: if, notify-send.
+v)Delete the files created in the process.
+	Command used rm
+vi) Repeat the above process every 10 second.
+	Command used: while,sleep
+

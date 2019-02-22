@@ -1,0 +1,19 @@
+Firstly ./create_asgn was executed which created a directory asgn.
+
+Then directory was changed to asgn but on using ls it showed permission denied.
+On executing la in the pevious directory it showed that the owner didn't had the
+ reading permissions. So by executing 'chmod 711 asgn' read permissions was give
+n to asgn directory.
+
+Then ther was an executable run_me in the asgn dir.uppon executing './run_me' it
+ again showed permission denied. Upon executing la it showed that there was a sy
+mlink from run_me to bin/.run_me.
+Then on changing the directory to bin and executing 'la' it showed that executin
+g permissions were not given. So on executing 'chmod 744 .run_me' execution perm
+issions wereprovided to the file.
+
+Now going back to the previous directory and executing './run_me' it gave an err
+or telling that directory outout doesn't exist.
+So directory output was created by running 'mkdir output' and again runnig run_m
+e code.html was obtained from output directory
+

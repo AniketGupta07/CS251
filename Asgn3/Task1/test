@@ -1,0 +1,4 @@
+strlib.a Read,Execute /home/naman/xyz/
+runme Write,Execute /home/naman/UWW/xyz/
+string.h None /home/naman/UWW/xyz/qr/
+hello.pdf Read,Write,Execute /home/naman/UWW/xyz/qr/
