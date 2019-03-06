@@ -1,0 +1,14 @@
+For fibonnaci :
+We used iterative method. 
+fib_temp takes 4 argument where c is the counter denoting which fibonnacci is currently calculated
+a and b denotes Fc and Fc-1
+
+For prime:
+modu n calculates the modulo of n wrt to all 2<i<n-1 
+
+
+
+
+
+
+
