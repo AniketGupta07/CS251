@@ -13,7 +13,7 @@ fib_inf = [fib i | i<-[1..]]
 
 
 modu n = [x | x<-[2..n-1], n`mod`x ==0]
-isprime n  |length(modu n) == 0 =1 |otherwise =0
-inf = [ x | x<-[2..], isprime(x)==1]
+isprime n  |length(modu n) == 0 =1 |otherwise = 0
+prime_inf = [ x | x<-[2..], isprime(x)==1]
 
-prime n = inf!!(n - 1 )
+prime n = inf!!(n - 1)
