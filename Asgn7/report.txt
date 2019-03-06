@@ -4,7 +4,10 @@ fib_temp takes 4 argument where c is the counter denoting which fibonnacci is cu
 a and b denotes Fc and Fc-1
 
 For prime:
-modu n calculates the modulo of n wrt to all 2<i<n-1 
+modu n return all elements in 2<i<n-1 which divide n 
+isprime n function checks if 'n' is prime or not by checking the length of array returned by modu n.
+inf is the infinite array of all primes made by checking each element by function isprime.
+prime n function simply returns nth prime from the inf array.
 
 
 
