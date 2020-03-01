@@ -1,0 +1,36 @@
+
+Ans. 3)
+
+Function myFoldl works in following way:
+In the given implementation foldr returns a function which operates on z.
+So It keeps on recursively creating the function using step and foldr from left to right.
+Once it reaches the end, it then starts recursively solving (starting from given value if z) which is now indeed left to right, this is what foldl does.
+
+let a1,a2,a3.....ak be the elements of xs
+
+foldl f z xs
+
+exapands as --- f (f(f.....(f(f z a1)a2)..) ak -- (if k is not zero.. otherwise z) 
+
+and foldr f z xs as 
+-- f a1 (f a2 .....(f ak z))
+
+
+so in
+myFoldl f z xs = foldr step id xs z
+    where step x g a = g (f a x)
+
+now since it is right associative (foldr step id xs) is applied to z
+
+Now (foldr step id xs) z expands as
+
+step a1 (step a2 (....(step ak id))) z
+
+By defn of step..
+
+step a2 (....(step ak id)) (f z a1)
+
+step a3 (.....(step ak id)) (f (f z a1) a2)
+
+... which reduces to the defn of foldl( since id is the identity function..we would not have to implement empty list condition)
+ 

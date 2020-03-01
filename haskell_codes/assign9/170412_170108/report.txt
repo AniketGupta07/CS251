@@ -1,0 +1,14 @@
+-------------------Substitution Ciphers-------------------
+(solved by Aniket Gupta(170108) and Naman Gupta(170412))
+
+There are two types of ciphers : One which take set off symbols present in cipher as an array and the
+other which assumes that the letters are mapped amongst themselves.
+
+To solve these cipher we apply following algorithm:
+i) First we sort charcters according to their frequency, and map them to english letters as per the frequency of english alphabets.
+ii) Now we start swapping two symbols randomly and if the number of matches with dictionary is more we keep this swapped array otherwise keep working with the older array.
+iii) We repeat step (ii) about 100-500 times.
+iv)substition array at the end of step (iii) is our solution.
+
+Heurestics Used:
+i) We tried swapping in a given range but swapping in range (1,6) gave best results also we similarly found an appropriate range of the index to be swapped.
